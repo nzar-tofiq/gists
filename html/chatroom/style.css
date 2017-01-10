@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    height:100%;
+    width:100%;
+    margin:0;padding:0;
+    overflow:hidden;
+    background: #7acbff;
+    font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    color: #FFF;
+    font-weight: 600;
+}
+
+a { 
+    text-decoration: none;
+    color: #DDD;
+}
+
+a:hover { 
+    color: #FFF; 
+}
+
+.clear {
+    clear: both;
+}
+
+
+.space { 
+    background: url('img/moon.png') left top no-repeat, 
+    url('img/rocket.png') right center no-repeat,
+    url('img/space.png') top left;
+}
+
+.sky {
+    background: #2cacff url('img/sky.gif') repeat-x 0 0;
+}
+
+.ground-sky {
+    background: url('img/ground-sky.gif'), 
+    url('img/grass.png'); 
+    background-position: top right, bottom left; 
+    background-repeat: repeat-x;
+}
+.underground { 
+    background-image: url('img/dirt.jpg');
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background: none;
+    height: 85px;
+    width: 100%;
+}
+
+header img {
+    padding: 10px 0;
+    float: left;
+}
+
+.head-wrap {
+    width: 80%;
+    margin: 0 10%;
+}
+
+
+#wrapper {
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;left:0;
+    background-color:#7acbff;
+    overflow:hidden;
+}
+
+#mask {
+    width:100%;
+    height:500%;
+    background-color:#7acbff;
+}
+
+.item {
+    width:100%;
+    height:20%;
+    float:left;
+    background-color:#7acbff;
+}
+    
+    
+.content {
+    width:100%;
+    height: 100%;
+    margin:0 auto;
+    position:relative;
+}
+    
+.selected {
+    font-weight:800;
+    color: #FFF;
+}
+
+nav {
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+nav ul li {
+    display: inline;
+    padding: 10px 15px;
+    margin: 0 5px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 0;
+    border-radius: 5px;
+}
+
+#register-page, #login-page, #home-page {
+    text-align: center;
+}
+
+.chatroom-image {
+    padding-top: 150px;
+}
+
+#messagesBox {
+    height: 80%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+
+
+
+/***** FORMS *****/
+
+input, textarea {    
+    padding: 9px;
+    border: solid 1px #E5E5E5;  
+    outline: 0;  
+    font: normal 13px/100% Verdana, Tahoma, sans-serif;   
+    background: #FFFFFF; 
+}  
+  
+textarea {   
+    width: 60%;   
+    height: 100px;
+    margin: 0 20px;
+    float: left;
+}  
+  
+input:hover, textarea:hover,  
+input:focus, textarea:focus {   
+    border-color: #C9C9C9;   
+}
+
+.submit input {  
+    width: auto;
+    background: #617798;
+    padding: 9px 15px;
+    border: 0;
+    font-size: 14px;
+    color: #FFFFFF;
+    cursor: pointer;
+}  
+
+#registerForm fieldset, #loginForm fieldset {
+    border:none;
+    background: rgba(11, 67, 120, 0.6);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top:120px;
+    display: inline-block;
+}
+
+#registerForm fieldset legend, #loginForm fieldset legend {
+    padding-top:60px;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#feedback, #login-failed {
+    display: none;
+    margin-top:120px;
+    border:none;
+    background: rgba(11, 67, 120, 0.6);
+    border-radius: 5px;
+    padding: 20px;
+    width: auto;
+}
+
+#writeMessageBox fieldset {
+    border: none;
+}
+
+#writeMessageBox {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 40px;
+}
+
+#writeMessageBox input {
+    float: left;
+}
+
+.chatroomBoxes {
+    padding-top: 120px;
+    height: 100%;
+}
+
+#messagesBox {
+    height: 60%;
+    width: 80%;
+    float:left;
+    overflow: auto;
+    padding: 40px;
+    box-sizing: border-box;
+}
+
+#startStopBtns {
+    display: none;
+}
+
+.usernameMsg {
+    font-weight: bold;
+}
+
+.msgContent {
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+    max-width:100%;
+    overflow: auto;
+}
+
+input[type="text"], input[type="name"], input[type="password"] {
+    width: 400px;
+    height: 30px;
+}
+
+
+
+
+
+
+
+

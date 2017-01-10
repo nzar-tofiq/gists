@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="author" content="Phil Lee, Shaq Reid_Robinson, Nzar Tofiq" />
+		<link rel="stylesheet" type="text/css" href="css/style.css"/>
+		<link rel="stylesheet" type="text/css" href="css/smoothness/jquery-ui-1.10.4.custom.css"/>
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/jquery-ui-1.10.4.custom.js"></script>
+		<script src="js/script.js"></script>
+		<title>Register</title>
+	</head>
+	<body>
+		<div id="wrapper">
+			<div id="header">
+				<div id="nav">
+					<button id="login_btn">Log in</button>
+				</div>
+				<div class="inputform">
+					<h2>Register</h2>
+					<form id="registerForm">
+						<table>
+							<tr><td><label for="reg_username">Username</label></td>
+								<td><input id="reg_username" type="text" /></td></tr>
+							<tr><td><label for="reg_password">Password</label></td>
+								<td><input id="reg_password" type="password" /></td></tr>
+							<tr><td><label for="reg_con_password">Confirm Password</label></td>
+								<td><input id="reg_con_password" type="password" /></td></tr>
+							<tr><td><label for="reg_alliance">Alliance</label></td>
+								<td>
+									<select id="reg_alliance">
+										<option value="Stark" selected="selected">Stark</option>
+										<option value="Lannister">Lannister</option>
+										<option value="Arryn">Arryn</option>
+										<option value="Baratheon ">Baratheon</option>
+										<option value="Targaryen ">Targaryen</option>
+										<option value="Tyrell">Tyrell</option>
+										<option value="White_Walker">White Walker</option>
+									</select>
+								</td>
+							</tr>
+							<tr><td></td><td><input class="submitbtn" type="submit" value="Register" /></td>
+						</table>
+					</form>
+					<div class="feedback" id="registerfeedback"></div>
+				</div>
+			</div> <!-- End #header -->
+		</div> <!-- End #wrapper -->
+	</body>
+</html>

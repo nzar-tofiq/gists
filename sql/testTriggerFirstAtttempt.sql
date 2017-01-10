@@ -1,0 +1,1 @@
+INSERT INTO tBooking(courseCode,bookingDate,individual,cyclistCount,clubID,courseFee,accommodationFee) VALUES('BC104','12-31-13','G',7,110,2240,490);

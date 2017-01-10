@@ -1,0 +1,1 @@
+SELECT bookingRef, courseFee, accommodationFee FROM tBooking WHERE bookingRef BETWEEN 1002 AND 1007;

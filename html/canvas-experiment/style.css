@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color:rgba(0,0,153,1);
+	}
+canvas{
+	border:2px rgba(255,255,255,1) solid;
+	}
+a {
+	color: #fff;
+	}
+#canv5{
+	width:400px;
+	height: 300px;
+	}
+#canv7{
+	width:600px;
+	height: 400px;
+	}

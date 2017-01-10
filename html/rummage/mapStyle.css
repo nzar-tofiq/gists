@@ -1,0 +1,21 @@
+@charset "utf-8";
+html { height: 100% }
+body {
+	font-family:Verdana, Geneva, sans-serif;
+	margin:auto;
+	height: 320px;
+	width: 320px;
+	}
+#map-canvas { 
+	height: 320px;
+	width: 320px;
+	}
+#mapError{
+	visibility:hidden;
+}
+.centerb-wrapper{
+text-align: center;
+}
+.centerb-wrapper * {
+margin: 0 auto;
+}

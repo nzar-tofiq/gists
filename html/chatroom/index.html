@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>myChat - CI227</title>
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/jquery-1.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
+
+<script>
+
+$(document).ready(function() {
+
+	$('#wrapper').scrollTo('#home-page', 0); 
+
+	$('a.panel').click(function () {
+
+		$('a.panel').removeClass('selected');
+		$(this).addClass('selected');
+		
+		current = $(this);
+		
+		$('#wrapper').scrollTo($(this).attr('href'), 800);		
+		
+		return false;
+	});
+
+	$(window).resize(function () {
+		resizePanel();
+	});
+	
+});
+
+function resizePanel() {
+
+	width = $(window).width();
+	height = $(window).height();
+
+	mask_height = height * $('.item').length;
+		
+	$('#debug').html(width  + ' ' + height + ' ' + mask_height);
+	
+	$('#wrapper, .item').css({width: width, height: height});
+	$('#mask').css({width: width, height: mask_height});
+	$('#wrapper').scrollTo($('a.selected').attr('href'), 0);
+		
+}
+
+</script>
+</head>
+<body>
+
+    <header>
+		<div class="head-wrap">
+			<nav>
+			<ul >
+				<li><a href="#home-page" class="panel" id="home-link">Home</a></li>
+				<li><a href="#chat-page" class="panel" id="chat-link">Chatroom</a></li>
+				<li><a href="#login-page" class="panel" id="login-link">Login</a></li>
+				<li><a href="#register-page" class="panel" id="register-link">Register</a></li>
+
+			</ul>
+			</nav>
+		</div>
+    </header>
+
+<div id="wrapper">
+	<div id="mask">
+
+		<div id="register-page" class="item">
+			<a name="item2"></a>
+			<div class="content space">
+			<form id="registerForm">
+                <fieldset>
+                    <!--put log-in details in this fieldset-->
+                    <legend>Registration</legend>
+                        <input type="name" id="firstName" name="firstName" placeholder="* First name" required /><br /><br />
+                        <input type="name" id="surName" name="surName" placeholder="* Surname" required /><br /><br />
+                        <input type="text" id="newUserName" name="newUserName" placeholder="* Username" required /><br /><br />
+                        <input type="password" id="password1" name="password1" placeholder="* Password" required /><br /><br />
+                        <input type="password" id="password2" name="password2" placeholder="* Again" required /><br /><br />
+                    <input type="submit" id="submitRegDetails" value="Register">
+                </fieldset>
+            </form>
+            <div id="feedback"></div>
+			</div>
+		</div>
+
+		<div id="login-page" class="item">
+			<a name="item4"></a>
+			<div class="content sky">
+			<form id="loginForm">
+                <fieldset id="login-styling">
+                    <!--put registration details in this fieldset-->
+                    <legend>Login</legend>
+                        <input type="text" id="username" name="username" placeholder="Username" autofocus required autocomplete="on" /><br /><br />
+                        <input type="password" id="password" name="password" placeholder="Password" required autocomplete="on" /><br /><br />
+                    	<input type="submit" id="loginBtn" value="Login">
+                </fieldset>
+            </form>
+            <div id="login-failed"></div>
+			</div>
+		</div>
+		
+		<div id="home-page" class="item">
+			<a name="item3"></a>
+			<div class="content ground-sky">
+				<img src="img/chatroom.png" alt="chatroom" title="chatroom" class="chatroom-image" />
+			</div>
+		</div>
+
+		<div id="chat-page" class="item">
+			<a name="item5"></a>
+			<div class="content underground">
+
+					<div class="chatroomBoxes">
+                		<div id="messagesBox"></div>
+			 			<div id="startStopBtns">
+                    		<input type="button" id="startBtn" value="Start" />
+                    		<input type="button" id="stopBtn" value="Stop" />
+               			</div>
+               			<h1>Online users</h1>			
+            			<div id="membersOnLine">
+                			<div id="membersOnline">
+                				<input type="button" value="Show" id="showMembers" />
+                			</div>
+            			</div>
+               			<div class="clear"></div>
+            			<div id="writeMessageBox">
+                			<form for="sendMessage" id="sendMsg">
+                   			 	<fieldset>
+                            		<textarea id="sendMessage" required>Type your message here...</textarea>
+                        			<input type="submit" id="send" value="Send" />
+                    	 		</fieldset>
+                			</form>
+           				</div> 
+            		</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>

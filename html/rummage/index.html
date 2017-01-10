@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rummage</title>
+		<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="logo.png" />
+        
+        <!---Jquery Library-->
+		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.js"></script>
+        
+        <!-- jquery themeroller-->
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.2/jquery.mobile-1.4.2.min.css" />
+        <link rel="stylesheet" href="css/rummage.css" />
+  		<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+        
+        <!--QR Code handlers-->
+        <script src="js/jsqrcode.js" type="text/javascript"></script>
+		<script src="js/megapix-image.js" type="text/javascript"></script>
+		<script src="js/exif.js" type="text/javascript"></script>
+		
+		<script src="js/accessibility.js" type="text/javascript"></script>
+        <script src="js/score.js" type="text/javascript"></script>
+	</head>
+	<body>
+    	
+		<!--
+			This is the Home page that will be displayed when the user loads the app
+		-->
+		<div data-role="page" data-theme="b" id="Home">
+			<div data-role="header">
+				<a href="#Help" data-icon="gear">Help</a>
+				<h1>Rummage</h1>
+				<a href="#Home"  data-icon="home">Home</a>
+			</div>
+		
+			<ul data-role="listview" data-split-icon="star" data-split-theme="b">
+				<li><a href="#Library"><h1>Library</h1></a><a href="#popupmap1" data-rel="popup" data-position-to="window" data-transition="fade" ></a></li>
+                <li><a href="#CrazyGolf"><h1>Crazy Golf</h1></a><a href="#popupmap2" data-rel="popup" data-position-to="window" data-transition="fade" ></a></li>
+				<li><a href="#Cafe"><h1>Cafe</h1></a><a href="#popupmap3" data-rel="popup" data-position-to="window" data-transition="fade" ></a></li>
+				<li><a href="#AlexandraPark"><h1>Alexandra Park</h1></a><a href="#popupmap4"  data-rel="popup" data-position-to="window" data-transition="fade"></a></li>
+				<li><a href="#HastingsPier"><h1>Hastings Pier</h1></a><a href="#popupmap5"data-rel="popup" data-position-to="window" data-transition="fade"></a></li>
+				<li id="score">0/75</li>
+			</ul>
+			
+			
+			<div data-role="popup" id="popupmap1" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<iframe src="library.html" width="320" height="320" seamless></iframe>
+			</div>
+            <div data-role="popup" id="popupmap2" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<iframe src="map.html" width="320" height="320" seamless></iframe>
+			</div>
+			<div data-role="popup" id="popupmap3" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<iframe src="cafe.html" width="320" height="320" seamless></iframe>
+			</div>
+				<div data-role="popup" id="popupmap4" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<iframe src="park.html" width="320" height="320" seamless></iframe>
+			</div>
+				<div data-role="popup" id="popupmap5" data-overlay-theme="a" data-theme="a" data-corners="false" data-tolerance="15,15">
+				<a href="#" data-rel="back" data-role="button" data-theme="a" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>
+				<iframe src="pier.html" width="320" height="320" seamless></iframe>
+			</div>
+		
+            
+		</div><!-- End of Home page -->
+		<!--
+			This is the library page
+		-->
+		<div data-role="page" data-theme="b" id="Library">
+			<div data-role="header">
+				<a href="#Help"  data-icon="gear">Help</a>
+				<h1>Library</h1>
+				<a href="#Home" data-icon="home">Home</a>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 1</h3>
+				<p>Locate the Priory Road campus library. What time does the Library close on a Tuesday?</p>
+				<form id="libform1">
+					<input type="text" id="libtxt1"/>
+					<button type="submit" id="libbtn1">Submit</button>
+				</form>
+			</div>
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 2</h3>
+				<p>The librarian holds the QR code for this task. Rent out a book of your choice to request this.</p>
+				<div class="center">
+					<img id="libqr" alt="QR Code" class="media"/>
+				</div>
+				<form id="libform2">
+					<input type="file" id="libtxt2" accept="image/*" capture="camera"/>
+				</form>
+			</div>
+		</div><!-- End of Library page -->
+		
+		<!--
+			This is the CrazyGolf page
+		-->
+		<div data-role="page" data-theme="b" id="CrazyGolf">
+			<div data-role="header">
+				<a href="#Help"  data-icon="gear">Help</a>
+				<h1>Crazy Golf</h1>
+				<a href="#Home"  data-icon="home">Home</a>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 1</h3>
+				<p>Locate the Hastings crazy golf course. How many holes are there on this course?</p>
+				<form id="cgform1">
+					<input type="text" id="cgtxt1"/>
+					<button type="submit" id="cgbtn1">Submit</button>
+				</form>
+			</div>
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 2</h3>
+				<p>Play a game of crazy golf and request the QR code from an employee when you are finished.</p>
+				<div class="center">
+					<img id="cgqr" alt="QR Code" class="media"/>
+				</div>
+				<form id="cgform2">
+					<input type="file" id="cgtxt2" accept="image/*" capture="camera"/>
+				</form>
+			</div>
+		</div><!-- End of the CrazyGolf page -->
+		
+		<!--
+			This is the Cafe page
+		-->
+		<div data-role="page" data-theme="b" id="Cafe">
+			<div data-role="header">
+				<a href="#Help" data-icon="gear">Help</a>
+				<h1>Cafe</h1>
+				<a href="#Home" data-icon="home">Home</a>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 1</h3>
+				<p>Locate the University Cafe. How much does it cost for a cup of tea?</p>
+				<form id="cafform1">
+					<input type="text" id="caftxt1"/>
+					<button type="submit" id="cafbtn1">Submit</button>
+				</form>
+			</div>
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 2</h3>
+				<p>Purchase food or drink of your choice and a staff member at the till will show you are QR code on request.</p>
+				<div class="center">
+					<img id="cafqr" alt="QR Code" class="media"/>
+				</div>
+				<form id="cafform2">
+					<input type="file" id="caftxt2" accept="image/*" capture="camera"/>
+				</form>
+			</div>
+		</div><!-- End of the Cafe page -->
+		
+		<!--
+			This is the AlexandraPark page
+		-->
+		<div data-role="page" data-theme="b" id="AlexandraPark">
+			<div data-role="header">
+				<a href="#Help"  data-icon="gear">Help</a>
+				<h1>Alexandra Park</h1>
+				<a href="#Home" data-icon="home">Home</a>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 1</h3>
+				<p>What year was Alexandra Park opened?</p>
+				<form id="apform1">
+					<input type="text" id="aptxt1"/>
+					<button type="submit" id="apbtn1">Submit</button>
+				</form>
+			</div>
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 2</h3>
+				<p>There are lots of benches in this park. Maybe one of them has the QR code for this task on its arm?</p>
+				<div class="center">
+					<img id="apqr" alt="QR Code" class="media"/>
+				</div>
+				<form id="apform2">
+					<input type="file" id="aptxt2" accept="image/*" capture="camera"/>
+				</form>
+			</div>
+		</div><!-- End of the AlexandraPark page -->
+		
+		<!--
+			This is the HastingsPier page
+		-->
+		<div data-role="page" data-theme="b" id="HastingsPier">
+			<div data-role="header">
+				<a href="#Help" data-icon="gear">Help</a>
+				<h1>Hastings Pier</h1>
+				<a href="#Home"  data-icon="home">Home</a>
+			</div>
+			
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 1</h3>
+				<p>When year was the recent fire at Hastings pier?</p>
+				<form id="hpform1">
+					<input type="text" id="hptxt1"/>
+					<button type="submit" id="hpbtn1">Submit</button>
+				</form>
+			</div>
+			<div data-role="collapsible" data-collapsed="false">
+				<h3>Task 2</h3>
+				<p>A question on the entrance of the pier reveals the wearabouts of the QR code for this task</p>
+				<div class="center">
+					<img id="hpqr" alt="QR Code" class="media"/>
+				</div>
+				<form id="hpform2">
+					<input type="file" id="hptxt2" accept="image/*" capture="camera"/>
+				</form>
+			</div>
+		</div><!-- End of the HastingsPier page -->
+	
+		<!--
+			This is the Help page
+		-->
+		<div data-role="page" data-theme="b" id="Help">
+			<div data-role="header">
+				<a href="#Help" data-icon="gear">Help</a>
+				<h1>Help</h1>
+				<a href="#Home"  data-icon="home">Home</a>
+			</div>
+			
+			<!--
+				Button to decrease the text size
+			-->
+			 <button id="DecreaseTxtSizeBtn" type="button" onclick="decreaseTextSize()" data- data-inline="true">Decrease text size</button>
+			<!--
+				Button to set the text size to normal
+			-->
+			<button id="NormalTxtSizeBtn" type="button" onclick="normalTextSize()" data-inline="true">Normal text size</button>
+			<!--
+				Button to increase the text size
+			-->
+			<button id="IncreaseTxtSizeBtn" type="button" onclick="increaseTextSize()" data-inline="true">Increase text size</button>
+            
+           <button onclick="localStorage.clear();location.reload();">Restart Game</button>
+		</div><!-- End of the help page -->
+	</body>
+</html>

@@ -1,0 +1,17 @@
+div	{
+	display: inline;
+	float: left;
+	position: fixed;
+	top: 10px;
+	left:10px;	
+}
+#change{
+	background-color:rgba(20,20,20,.8);
+	border:rgba(20,20,20,.8);
+	position: relative;
+	top: -9px;
+	color:#FFF;
+	font-size: 1.2em;
+	padding: .2em;
+	border-radius:5px;
+}

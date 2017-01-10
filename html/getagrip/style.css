@@ -1,0 +1,283 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; margin:0;padding:0; }
+body, html { font-size: 100%; padding: 0; margin: 0; overflow:hidden; }
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	font-family: 'PT Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+	background: #F7F7F7;
+	color: #555;
+	height: 100vh;
+}
+
+.left { float: left; }
+.right { float: right; }
+.clear { clear: both; }
+a { color: #4E93B8; text-decoration: none; }
+p { line-height: 1.5em; }
+
+header {
+	text-align: center;
+	width: 100vw;
+	height: 9vh;
+	background-color: #FFF;
+	padding-top: 0.9em;
+	border-bottom: 1px solid #CCC;
+	position: fixed;
+	min-height: 20px;
+}
+
+h1 {
+	color: #555;
+	font-weight: 400;
+	word-spacing: -0.3em;
+	letter-spacing: -5px;
+	font-size: 5vh;
+}
+
+h4 {
+	color: #888;
+	font-size: 4vh;
+	margin-top: 2vh;
+}
+
+h1 span {
+	color: #7eb9e3;
+}
+
+header h1 {
+	position: absolute;
+	top: 0.3em;
+	right: 0.3em;
+	text-align: right;
+	letter-spacing: .02vw;
+	width: auto;
+	font-size: 5vh;
+}
+
+header h2 {
+	font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-weight: 300;
+	font-size: 5vh;
+}
+
+header div {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.title {
+	height: 13vh;
+}
+
+.pt-page-1 h1 {
+	margin: 1vh 0 1vh 10vw;
+	text-transform: lowercase;
+	float: left;
+	width: 40vw;
+}
+
+.pt-page-1 h4 {
+	margin: 4vh 0 0 2vw;
+	float: left;
+	font-weight: 400;
+	width: 30vw;
+}
+
+.grid-begin {
+	height: 2vh;
+}
+
+.grid {
+	height: 80vh;
+}
+
+.grid a {
+	display: block;
+	background: #4E93B8 url('../images/gradient.png') bottom center no-repeat;
+	float: left;
+	margin-bottom: 2vh;
+	margin-left: 2vw;
+	font-weight: 300;
+	font-family: 'Open Sans', 'Lucida Grande', 'Lucida Sans Unicode', Arial, sans-serif;
+	color: #FFF;
+	text-align: center;
+	
+}
+
+a.span2 {
+	width: 47vw !important;
+	height: 28vh !important;
+	padding: 10vh 0;
+}
+
+a.span3 {
+	width: 30.6666666667vw !important;
+	height: 22vh !important;
+	padding: 9vh 0;
+}
+
+.bg1 {
+	background-color: #555 !important;
+}
+
+.bg2 {
+	background-color: #738eaa !important;
+}
+
+.bg3 {
+	background-color: #5086bd !important;
+}
+
+.bg4 {
+	background-color: #1669bd !important;
+}
+
+.bg5 {
+	background-color: #4f5c6a !important;
+}
+
+.bg6 {
+	background-color: #325171 !important;
+}
+
+.pong {
+	margin: 10vh 5vw 5vh 5vw;
+}
+
+.bat {
+	height: 5em;
+}
+
+.back-button {
+	height: 7vh;
+	position: absolute;
+	top: 1vh;
+	left: 2vw;
+	width: auto;
+	display: block;
+}
+
+article {
+	margin-top: 10vh;
+	margin-left: 2vw;
+	font-size: 2.75vh;
+}
+article video{
+	height: 30vw;
+}
+.videoWrap{
+	text-align: center;
+	width: 100vw;
+}
+
+.mainWrap video, .mainWrap p {
+	float: left;
+	margin-left: 10vw;
+	width: 20vw;
+	height: auto;
+	text-align: center;
+	font-weight: 600;
+}
+
+.mainWrap {
+	margin-top: 5vh;
+	width: 100vw;
+}
+
+article img{
+	height: 40vh;
+}
+
+#mapAndList{
+	height: auto;
+	width: 96vw !important;
+}
+
+#mapAndList img {
+	height: 21px;
+	width: 21px;
+}
+
+#map-canvas { 
+	height: 60vh !important;
+	width: auto;
+	margin-right: 2vh !important;
+}
+
+#mapAndList ul{
+	width: 47vw;
+	float:left;
+	margin: 2vh 0 4vh 0;
+}
+
+#places-to-play {
+	margin-right: 2vw;
+}
+
+#mapError{
+	visibility:hidden;
+}
+
+
+
+.pt-page-5 article iframe {
+	width: 48vw;
+	height: 70vh;
+	float: left;
+	overflow: hidden;
+}
+
+.pt-page-5 audio {
+	display: block;
+	width: 20vw;
+	margin: 2vh auto;
+}
+
+.pt-page-7 table {
+	margin: 5vh auto;
+}
+
+.pt-page-7 table th {
+	background-color: #4E93B8;
+	color: #FFF;
+	font-weight: bold;
+	padding: 10px;
+}
+
+.pt-page-7 table tr:nth-child(even) {
+	background-color: #FFF;
+}
+
+.pt-page-7 table tr:nth-child(odd) {
+	background-color: #EEE;
+}
+
+.pt-page-7 table tr td {
+	padding: 10px;
+}
+
+.svg {
+	display: block;
+	height: 25vh;
+	width: auto;
+	margin: 5vh auto;
+}
+
+#words{
+	text-align:center;
+	margin:5vh 0;
+}
+
+.machine{
+	width:40vw;
+	margin: 5vh auto;
+}
+
+.machine img{
+	width:100%;
+	height:auto;
+}

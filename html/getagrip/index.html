@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    	<title>Table Tennis</title> 
+    	<meta http-equiv="article-Type" article="text/html; charset=UTF-8" />
+    	<meta name="viewport" article="width=device-width, height=device-height, initial-scale=1">
+    	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico" />
+    	<link href='http://fonts.googleapis.com/css?family=PT+Sans:400' rel='stylesheet' type='text/css' />
+    	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,700' rel='stylesheet' type='text/css' />
+
+    	<link rel="stylesheet" type="text/css" href="css/reset.css" />
+    	<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<link rel="stylesheet" type="text/css" href="css/animations.css" />
+		<script src="js/modernizr.custom.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/flowtype.js"></script>
+		<script src="http://code.createjs.com/easeljs-0.6.0.min.js"></script>
+		<script src="http://code.createjs.com/tweenjs-0.4.0.min.js"></script>
+		<script src="http://code.createjs.com/movieclip-0.6.0.min.js"></script>
+		<script src="http://code.createjs.com/preloadjs-0.3.0.min.js"></script>
+		<script src="js/topspin.js"></script>
+		<script src="js/topSpinInit.js"></script>
+		<script src="js/backspin.js"></script>
+		<script src="js/backspin2.js"></script>
+
+		<script>
+			document.createElement('header');
+			document.createElement('nav');
+			document.createElement('article');
+			document.createElement('footer');
+		</script>
+</head>
+<body>
+
+		<div id="pt-main" class="pt-perspective">
+			<div id="page-1" class="pt-page pt-page-1">
+					<div class="title"><h1>get<span>a</span>grip</h1><h4>/ A guide to table tennis</h4></div>
+				<div class="clear grid-begin"></div>
+				<ul class="grid">
+					<li><a class="span2 bg0" href="#">introduction</a></li>
+					<li><a class="span2 bg1" href="#">thebasics</a></li>
+					<li><a class="span3 bg2" href="#">serve</a></li>
+					<li><a class="span3 bg3" href="#">spin</a></li>
+					<li><a class="span3 bg4" href="#">extra!</a></li>
+					<li><a class="span2 bg5" href="#">resources</a></li>
+					<li><a class="span2 bg6" href="#">getinvolved</a></li>
+				</ul>
+			</div>
+			<div id="page-2" class="pt-page pt-page-2">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>Introduction</h2>
+				</header>	
+				<article>
+					<p>The game of table tennis was first played in the 1880s and has become bigger and bigger ever since. The game of table tennis, or ping-pong, 
+					is a sport in which two or four players hit a lightweight ball over a net trying to win points. Below is the introductory video to table tennis. Please watch and enjoy.</p>
+			
+					<p id="words"></p>
+					<div class="videoWrap">
+						<video id="myVideo" controls>
+							<source src="vids/getagrip.mp4" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					</div>
+				</article>
+				
+				<script>
+					var video = document.getElementById("myVideo");
+					var words = document.getElementById("words");
+					
+					video.addEventListener("timeupdate", videoTimeUpdated, false)
+					
+					function videoTimeUpdated(event){
+					
+					var videotime=video.currentTime;
+					
+					if((videotime>15.00) && (videotime<32.00)){
+						words.innerHTML="Mark Sucks at Table Tennis";
+						}else if (videotime>44.00 && videotime<52.00){
+							words.innerHTML="Naz Drafted at Last Minute";
+						} else{
+								words.innerHTML="";
+						}
+						}
+					</script>
+				
+			</div>
+			<div id="page-3" class="pt-page pt-page-3">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>The Basics</h2>
+				</header>
+				<article>
+					<p>Find someone to play with. You probably want to begin by playing someone who is at about your skill level or a little better, and preferably someone who isn't aggressively competitive. Failing that you can build a
+						cutting edge machine to play against(as depicted below).
+					This way, you can have fun learning how to play. You can play one-on-one, or you can play with two teams of two, which is known as doubles. And you want someone who has regulation ping pong balls,
+					paddles, and a table if you don't have access to any!
+					</p>
+					<div class="machine">
+						<img src="images/tennismachine.gif" alt="" title="" />
+						</div>
+				</article>
+			</div>
+			<div id="page-4" class="pt-page pt-page-4">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>Serving</h2>
+				</header>
+				<article>
+					<p>Below we have 3 videos that will hopefully explain to you the different types of serve used within the game of table tennis. The First video, which is of Owen, shows how to perform a basic serve
+					whilst the second and third videos staring Phil take you through performing the backspin and topspin serves.
+					We have used numerous angles to produce these videos and hopefully they will show you how to perform this.</p>
+							<div class="mainWrap">
+								<video controls>
+									<source src="vids/serve.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+								<video controls>
+									<source src="vids/serve-top.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+								<video controls>
+									<source src="vids/serve-back.mp4" type="video/mp4">
+									Your browser does not support the video tag.
+								</video>
+								<div class="clear"></div>
+								<p>This is a basic serve</p>
+								<p>This is a topspin serve</p>
+								<p>This is a backspin serve</p>
+						</div>
+				</article>
+			</div>
+			<div id="page-5" class="pt-page pt-page-5">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>Spinning</h2>
+				</header>
+				<article>
+					<div id="iframe1">
+					</div>
+					<div id="iframe2">
+					</div>
+					<p>This is an example of how to play the 2 mains types of spin. On the Left is the topspin shot where you slice up on the ball to impart spin and on the right is backspin where you slice down for the opposite effect.</p>
+					<audio controls>
+						<source src="vids/spinning.mp3" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+				</article>
+			</div>
+			<div id="page-6" class="pt-page pt-page-6">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>Extra!</h2>
+				</header>
+					<article>
+						<p>This is an extra video we decided to include hopefully Robin will give us massive extra credit for the skills required to create this modern masterpiece. If not 
+						feel free to enjoy it anyway.<br /> Warning: May induce vomiting if viewed!</p>
+							<br />
+							<br />
+							<br />
+								<div class="videoWrap">
+									<video controls>
+										<source class="extravid" src="vids/extra.mp4" type="video/mp4">
+											Your browser does not support the video tag.
+									</video>
+								</div>
+					</article>
+			</div>
+			<div id="page-7" class="pt-page pt-page-7">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>Resources</h2>
+				</header>
+				<article>
+					<p>There are a variety of different resources available across the Internet to aid in understanding of the sport and provide interesting insights into the history of table tennis.</p>
+					<table>
+						<tr>
+							<th>Resource</th>
+							<th>Location</th>
+						</tr>
+						<tr>
+							<td>Table Tennis (England)</td>
+							<td><a href="http://tabletennisengland.co.uk/">http://tabletennisengland.co.uk/</a></td>
+						</tr>
+						<tr>
+							<td>International Table Tennis Federation</td>
+							<td><a href="http://www.ittf.com/">http://www.ittf.com/</a></td>
+						</tr>
+						<tr>
+							<td>Veterans English Table Tennis Association</td>
+							<td><a href="http://www.vetts.org.uk/VETTS/index.html">http://www.vetts.org.uk/VETTS/index.html</a></td>
+						</tr>
+						<tr>
+							<td>UK Deaf Table Tennis</td>
+							<td><a href="http://www.ukdtta.org.uk/index.html">http://www.ukdtta.org.uk/index.html</a></td>
+						</tr>
+						<tr>
+							<td>English School Table Tennis</td>
+							<td><a href="http://www.estta.org.uk/">http://www.estta.org.uk/</a></td>
+						</tr>
+						<tr>
+							<td>Table Tennis Rules</td>
+							<td><a href="http://www.pongworld.com/more/rules.php">http://www.pongworld.com/more/rules.php</a></td>
+						</tr>
+					</table>
+					<img src="images/resource.svg" alt="" title="" class="svg" />
+				</article>
+			</div>
+			<div id="page-8" class="pt-page pt-page-8">
+				<header>
+					<div><a href="#" class="btn Page-Transition" onClick="goBackPage(0)"><img src="images/back.png" alt="" title="" class="back-button" /></a></div>
+					<h1>get<span>a</span>grip</h1>
+					<h2>Get Involved</h2>
+				</header>
+				<article>
+					<div id="mapAndList">
+							<ul id="places-to-play"></ul>
+							<ul id="get-equipment"></ul>
+						<div class="clear"></div>
+						<div id="map-canvas">
+						</div>
+						<p id="mapError"></p>
+					</div>
+				</article>
+			</div>
+		</div>
+
+		<script src="js/transitions.js"></script>
+		<script>
+			$(".title").flowtype({minFont:16,maxFont:80,fontRatio:65});
+			
+			$(".grid a").flowtype({minFont:16,fontRatio:14});
+			$(".pt-page-1 h1").flowtype({minFont:16,fontRatio:6});
+			$(".pt-page-1 h4").flowtype({minFont:16,fontRatio:12});
+		</script>
+</body>
+</html>
